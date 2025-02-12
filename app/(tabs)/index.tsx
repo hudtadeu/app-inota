@@ -33,7 +33,7 @@ export default function HomeScreen() {
 
       {/* Área dos Cards */}
       <ScrollView contentContainerStyle={styles.cardsContainer}>
-        <View style={styles.cardRow}>
+        <View style={styles.cardGroup}>
           <View style={styles.card}>
             <IconSymbol name="doc.text" size={24} color="#28a745" />
             <ThemedText style={styles.cardText}>1</ThemedText>
@@ -46,7 +46,7 @@ export default function HomeScreen() {
           </View>
         </View>
 
-        <View style={styles.cardRow}>
+        <View style={styles.cardGroup}>
           <View style={styles.card}>
             <IconSymbol name="exclamationmark.circle" size={24} color="#dc3545" />
             <ThemedText style={styles.cardText}>1834</ThemedText>
@@ -59,7 +59,7 @@ export default function HomeScreen() {
           </View>
         </View>
 
-        <View style={styles.cardRow}>
+        <View style={styles.cardGroup}>
           <View style={styles.card}>
             <IconSymbol name="checkmark.seal" size={24} color="#28a745" />
             <ThemedText style={styles.cardText}>Ativo</ThemedText>
@@ -126,17 +126,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom: 20,
   },
-  cardRow: {
+  cardGroup: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '90%',
-    marginBottom: 10,
+    marginBottom: 20,
   },
   card: {
     backgroundColor: '#fff',
     padding: 20,
     marginVertical: 8,
     width: '48%',
+    height: 150, // Set a consistent height for all cards
     borderRadius: 10,
     shadowColor: '#000',
     shadowOpacity: 0.1,
